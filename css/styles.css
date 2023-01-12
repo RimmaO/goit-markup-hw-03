@@ -90,10 +90,28 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* ----------------------Header: logo, navigation, adress----------------------------- */
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  margin-right: auto;
 }
 
 .header-logo-accent {
@@ -103,9 +121,6 @@ img {
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
 
   color: var(--accent-color);
 }
@@ -118,16 +133,17 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  display: flex;
-  align-items: center;
-
   color: var(--title-logo-link-color);
+  margin-right: 76px;
 }
 
 .header-list {
+  display: flex;
+  gap: 40px;
 }
 .header-item {
 }
+
 .header-link {
   font-weight: 500;
   font-size: 16px;
@@ -136,6 +152,7 @@ img {
 
   color: var(--title-logo-link-color);
 }
+
 .header-link:hover,
 .header-link:focus {
   color: var(--hover-focus-color);
@@ -151,12 +168,20 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--text-contacts-color);
+
+  display: flex;
+  gap: 40px;
 }
 
 /* --------------------- Main: section0 hero, button ----------------------------- */
 
 .hero {
   background-color: var(--hero-footer-bgc);
+  padding-top: 188px;
+  padding-bottom: 292px;
+}
+
+.hero-container {
 }
 .hero-title {
   font-size: 56px;
@@ -166,12 +191,15 @@ img {
 
   color: var(--hero-title-btn-color);
 
-  width: 494px;
-  padding-top: 188px;
-  padding-bottom: 292px;
+  max-width: 500px;
+  margin: 0 auto;
   margin-bottom: 48px;
 }
+
 .hero-btn {
+  min-width: 169px;
+  height: 56px;
+
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -179,11 +207,14 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  display: flex;
-  align-items: center;
-
   color: var(--hero-title-btn-color);
   background-color: var(--hero-btn-bgc);
+
+  border-radius: 4px;
+  padding: 16px 32px;
+
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-btn:hover,
@@ -200,6 +231,12 @@ img {
 .visually-hidden {
 }
 .features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.features-item {
+  width: calc((100% - 72px) / 4);
 }
 /* .features-title,
 .team-title,
@@ -235,6 +272,11 @@ img {
   margin-bottom: 72px;
 }
 .work-list {
+  display: flex;
+  gap: 24px;
+}
+.work-item {
+  width: calc((100% - 48px) / 3);
 }
 
 /* ---------------------Main: section3 Our Team -------------------------- */
@@ -246,13 +288,20 @@ img {
 .team-caption {
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  width: calc((100% - 72px) / 4);
 }
 .team-list-item {
   background-color: var(--team-list-item-bgc);
+  border-radius: 0px 0px 4px 4px;
 }
+
 .team-title {
+  text-align: center;
 }
 .team-text {
+  text-align: center;
 }
 
 /* ---------------------Footer: logo, text -------------------------- */
@@ -284,9 +333,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  display: flex;
-  align-items: center;
-
   color: var(--footer-logo-color);
 }
 
@@ -298,6 +344,7 @@ img {
   color: var(--footer-text-color);
 
   margin-top: 16px;
+  max-width: 264px;
 }
 
 /* ----------------------------second page PORTFOLIO---------------------------------------- */
@@ -307,6 +354,11 @@ img {
 .filter {
   padding-top: 96px;
   padding-bottom: 72px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 .filter-item {
   font-family: inherit;
@@ -316,14 +368,19 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  display: flex;
-  align-items: center;
-  text-align: center;
-
   color: var(--accent-color);
   background-color: var(--filter-item-bgc);
+
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+
+  padding: 12px 24px;
 }
 
+.current {
+  color: var(--hero-title-btn-color);
+  background-color: var(--hover-focus-color);
+}
 .filter-item:hover,
 .filter-item:focus {
   color: var(--hover-focus-color);
@@ -334,7 +391,17 @@ img {
 }
 .portfolio-list {
   padding-bottom: 120px;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
+
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
+}
+
 .portfolio-title {
 }
 .portfolio-text {
