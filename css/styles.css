@@ -276,11 +276,11 @@ img {
 
 /* ---------------------Main: section3 Our Team -------------------------- */
 .team {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--team-bgc);
 }
 .team-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
   border-radius: 0px 0px 4px 4px;
 }
 .team-caption {
@@ -307,11 +307,12 @@ img {
 }
 
 /* ---------------------Footer: logo, text -------------------------- */
-.footer-container {
-  background-color: var(--hero-footer-bgc);
-
+.footer {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.footer-container {
+  background-color: var(--hero-footer-bgc);
 }
 .footer-logo-accent {
   font-family: "raleway", sans-serif;
@@ -352,10 +353,12 @@ img {
 /* ----------------------------second page PORTFOLIO---------------------------------------- */
 
 /* ---------------------Main: section (Filter, Our Portfolio)-----------------------------*/
-
-.filter-container {
+.filter-portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
+}
+
+.filter-container {
 }
 
 .filter {
